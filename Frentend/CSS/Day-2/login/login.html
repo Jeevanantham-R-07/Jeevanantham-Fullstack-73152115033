@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            
+            .login{
+                border: 5px solid tomato;
+                height: 668px;
+                width: 1110px;
+                top: 100px;
+                left: 100px;
+                border-radius: 20px;
+                background-image: url(Untitled.png);
+                background-size: contain; 
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center; 
+                margin :100px auto;
+            }
+            
+            .login2{
+                border: 5px solid tomato;
+                border-radius: 10px;
+                background-color: rgba(240, 248, 255, 0.3);
+                padding: 25px;
+            }
+           
+            td{
+                text-align: center;
+                color: blue;
+                font-size: 20PX;
+            }tr{
+                height: 50px;
+            }
+            .button{
+                background-color: rgb(9, 224, 106);
+                border: none;
+                height: 50px;
+                width: 150px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 25px;
+      
+            }
+            .button:hover{
+                background-color: green;
+                border: none;
+                height: 50px;
+                width: 180px;
+                border-radius: 25px;
+                cursor: pointer;
+                font-size: 25px;
+                
+            }
+            .login3{
+                background-image: url(profilepic.png);
+                height: 100px;
+                width: 100px;
+                background-size: contain; 
+                background-repeat: no-repeat;
+                position: absolute;
+                top:200px
+            }
+            input{
+                background: transparent;
+
+            }
+            input::placeholder{
+                color: blue;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="login">
+        <div class="login3"></div>   
+        <div class="login2">
+            
+        <table  >
+            <tr></tr>
+            <tr ><td colspan="2">Login Page</td></tr>
+            <tr><td>Username</td>
+            <td><input type="text" placeholder="R Jeevanantham"></td></tr>
+            <tr><td>Password</td>    
+            <td><input type="password" placeholder="minimum 8 letter"></td></tr>
+            <tr><td colspan="2"><input type="checkbox">Agree with <a href="">Terms&Condition</a></td></tr>
+            <tr><td colspan="2" ><input type="submit" value="login" class="button"></td></tr>
+        </table>
+        <br>
+    </div> 
+    </div>
+        
+    
+    </body>
+</html>
