@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>JS Function</title>
+    </head>
+
+    <body>
+        <button onclick="MyFunction()" >click me</button><br><br>
+        <button onclick="Addition(10,20)" >Addition</button> <br><br>
+        <button onclick="Subraction(20,10)" >Subraction</button> <br><br>
+        <button onclick="multi(20,10)" >Multiplication</button> <br><br>
+            
+        <script>
+            function MyFunction(){
+                document.write("<b>This is JavaScript Function</b>")
+            }
+            function Addition(a,b){
+                let sum =a+b;
+                document.write("<b>The addition is : </b>"+sum);
+            }
+            function Subraction(a,b){
+                let sub =a-b;
+                document.write("<b>The subraction is : </b>"+sub);
+            }
+            function multi(a,b){
+                let mul =a*b;
+                document.write("<b>The Multiplication is : </b>"+mul);
+            }
+        </script>
+    </body>
+</html>

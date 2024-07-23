@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Factorial</title>
+    </head>
+    <body>
+        Enter the Number  <input type="text" id="n1" onblur="cal()" ><br><br>
+    
+        <div id="result"></div>
+
+        <script>
+            function cal(){
+                let i= parseInt(document.getElementById("n1").value);
+                let result=1;
+                for(let c=1;c<=i;c++){
+                    result=result*c;
+                }
+                let re="The Factorial of given number is : "+result;
+                document.getElementById("result").innerHTML=re;
+            }
+        </script>
+    </body>
+</html>

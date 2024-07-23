@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>My first js Webpage</title>
+    </head>
+
+    <body>      
+        Enter first Number <input  type="text" id="n1"><br><br>
+        Enter Second Number <input  type="text" id="n2"><br><br>
+        Select the Operation<select id="op">
+            <option value="add">Addition</option>
+            <option value="sub">Subraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+        </select><br><br>
+        <button onclick="greeting()" >Calculate</button> <br><br>
+        <div id="result"></div>
+
+        <script>
+            function greeting(){
+                let a= parseInt(document.getElementById("n1").value);
+                let b= parseInt(document.getElementById("n2").value);
+                let op=document.getElementById("op").value
+
+                let result="";
+                if(op=="add"){
+                        result="Addition : "+(a+b);
+                }
+                if(op=="sub"){
+                        result="Subraction : "+(a-b);
+                }
+                if(op=="mul"){
+                        result="multiplication : "+(a*b);
+                }
+                if(op=="div"){
+                        result="Divition : "+(a/b);
+                }
+                document.getElementById("result").innerHTML=result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Prime OR Not</title>
+    </head>
+    <body>
+        Enter the Number  <input type="text" id="n1"><br><br>
+        <button onclick="cal()">calculate</button><br><br>
+        <div id="result"></div>
+
+        <script>
+            function cal(){
+                let i= parseInt(document.getElementById("n1").value);
+                let result=0;
+                for(let c=2;c<i;c++){
+                    if(i%c==0){
+                        result++;
+                    }
+                }
+                if(result==0){
+                let re=i+" is prime";
+                document.getElementById("result").innerHTML=re;
+                }
+                else{
+                    let re=i+" is not prime";
+                document.getElementById("result").innerHTML=re;
+                }
+            }
+        </script>
+    </body>
+</html>

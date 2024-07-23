@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>JS PromptBox</title>
+    </head>
+    <body onload="welcome()" onunload="leave()">
+        <button onclick="greeting()" >Click me</button> <br><br>
+   
+        <script>
+            function greeting(){
+                let name=prompt("enter your name : ");
+                alert("Welcome : "+name);
+            }
+            function welcome(){
+                alert("Hi Welcome");
+            }
+            function leave(){
+                confirm("bye bye");
+            }
+        </script>
+    </body>
+</html>

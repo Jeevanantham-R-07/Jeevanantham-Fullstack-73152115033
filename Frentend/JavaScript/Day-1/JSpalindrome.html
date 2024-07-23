@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Prime OR Not</title>
+    </head>
+    <body>
+        Enter the Number  <input type="text" id="n1"><br><br>
+        <button onclick="cal()">calculate</button><br><br>
+        <div id="result"></div>
+
+        <script>
+            function cal(){
+                let i=(document.getElementById("n1").value);
+                let rev = i.split('').reverse().join('');
+                if(i==rev){
+                let re=i+" is Palindrome";
+                document.getElementById("result").innerHTML=re;
+                }
+                else{
+                    let re=i+" is not Palindrome";
+                document.getElementById("result").innerHTML=re;
+                }
+            }
+        </script>
+    </body>
+</html>
