@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Arrow Function</title>
+    </head>
+    <body onload="myFunction()">
+
+        <script>
+            const sum=()=>(10+20);
+            document.write("<br>Addition : "+(sum()));
+
+            const sub=(x,y)=>(x-y);
+            document.write("<br>Subraction : "+(sub(20,10)));
+
+            const mul=(x,y)=>(x*y);
+            document.write("<br>Multiplication : "+(mul(20,10)));
+
+            const div=(x,y)=>(x/y);
+            document.write("<br>Division : "+(div(20,10)));
+
+            const big=(x,y)=>{
+                if(x>y)
+                    return x;
+                else
+                    return y;
+            };
+            document.write("<br>Bigest : "+(big(5,10)));
+
+            const fact=(a)=>{
+                let b=1;
+                for(let i=1;i<=a;i++){
+                    b*=i;
+                }
+                    return b;
+            };
+            document.write("<br>Factroial : "+(fact(5)));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>String Function</title>
+    </head>
+
+    <body>      
+        Enter the String <input  type="text" id="n1"><br><br>
+        <button onclick="greeting()" >Run</button> <br><br>
+        <div id="result"></div><br>
+        <div id="result1"></div><br>
+        <div id="result2"></div><br>
+        <div id="result3"></div><br>
+        <div id="result4"></div><br>
+        <div id="result5"></div><br>
+        <div id="result6"></div><br>
+        <div id="result7"></div><br>
+        <div id="result8"></div><br>
+
+        <script>
+            function greeting(){
+                let input= (document.getElementById("n1").value);
+                let result="";
+                let result1="";
+                let result2="";
+                let result3="";
+                let result4="";
+                let result5="";
+                let result6="";
+                let result7="";
+                let result8="";
+                    result="String length "+input.length ;
+                    document.getElementById("result").innerHTML=result;
+                    result1="String 2 character is"+input.charAt(2);
+                    document.getElementById("result1").innerHTML=result1;
+                    result2="String Slice Between 2 to 4 is :"+input.slice(2, 4);
+                    document.getElementById("result2").innerHTML=result2;
+                    result3="String substr Between 2 to 4 is :"+input.substr(4, 4);
+                    document.getElementById("result3").innerHTML=result3;
+                    result4="Uppercase is "+input.toUpperCase();
+                    document.getElementById("result4").innerHTML=result4;
+                    result5="Lower is "+input.toLowerCase();
+                    document.getElementById("result5").innerHTML=result5;
+                    result6="Trim is "+input.trim();
+                    document.getElementById("result6").innerHTML=result6;
+                    result7="repeat is "+input.repeat(4);
+                    document.getElementById("result7").innerHTML=result7;
+                    result8="split is "+input.split('');
+                    document.getElementById("result8").innerHTML=result8;
+            }
+        </script>
+    </body>
+</html>

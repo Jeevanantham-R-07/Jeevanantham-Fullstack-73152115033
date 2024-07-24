@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Calculater</title>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: hsl(0, 0%, 10%);
+                
+            }
+            .outerBox{
+                background-color: hsl(208, 100%, 67%);
+                border: 6px solid rgb(13, 45, 228);
+                opacity: 0.9;
+                border-radius: 20px;
+            }
+            .row{
+                display: flex;
+                justify-content: center;
+            }
+            .box{
+                border: 3px solid rgb(7, 79, 138);
+                height: 80px;
+                width: 83px;
+                font-size: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 8px;
+                border-radius: 20%;
+                cursor: pointer;
+                background: transparent;
+                background-color: hsl(197, 71%, 73%);
+            }
+            .box:hover{
+                background-color: hsl(197, 61%, 53%)    
+            }
+            .display{
+                height: 80px;
+                width: 380px;
+                border: 4px solid black;
+                border-radius: 20px;
+                background-color: hsl(197, 71%, 93%);
+                font-size: 50px;
+                text-align: end;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="outerBox"><br>
+            <div class="row">
+                <input type="text" class="display" id="display"></input>
+            </div><br>
+            <div class="row">
+                <button class="box" onclick="display.value=''">C</button>
+                <button class="box" onclick="btn('%')">%</button>
+                <button class="box" onclick="deletea()">D</button>
+                <button class="box" onclick="btn('/')">/</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="btn(7)" id="btn">7</button>
+                <button class="box" onclick="btn(8)" id="btn">8</button>
+                <button class="box" onclick="btn(9)" id="btn">9</button>
+                <button class="box" onclick="btn('*')">*</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="btn(4)" id="btn">4</button>
+                <button class="box" onclick="btn(5)" id="btn">5</button>
+                <button class="box" onclick="btn(6)" id="btn">6</button>
+                <button class="box" onclick="btn('-')">-</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="btn(1)" id="btn">1</button>
+                <button class="box" onclick="btn(2)" id="btn">2</button>
+                <button class="box" onclick="btn(3)" id="btn">3</button>
+                <button class="box" onclick="btn('+')">+</button>
+            </div>
+            <div class="row">
+                <button class="box" onclick="btna(display.value)">SQ</button>
+                <button class="box" onclick="btn(0)" id="btn">0</button>
+                <button class="box" onclick="btn('.')" id="btn">.</button>
+                <button class="box" onclick="claculate()">=</button>
+            </div>
+        </div>
+        <script>
+            let display=document.getElementById("display");
+            function btn(input){    
+                display.value+=input;    
+            }
+            function claculate(){
+                try{
+                display.value=eval((display.value));
+                }
+                catch(error){
+                    display.value="Error";
+                }
+            }
+            function deletea(){
+                    display.value=display.value.substring(0,(display.value.length-1));     
+            }
+            function btna(input){    
+                display.value=input*input;    
+            }
+        </script>
+    </body>
+</html>

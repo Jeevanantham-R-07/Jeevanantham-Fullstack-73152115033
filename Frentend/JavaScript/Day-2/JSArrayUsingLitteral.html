@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>JavaScript Array Basic</title>
+    </head>
+    <body onload="myFunction()">
+
+
+        <script>
+            function myFunction(){
+                let skill=["c"," java"," git"," JavaScript "];
+                document.write("Array element is : "+skill);
+                document.write("<br>Array length is : "+skill.length);
+                document.write("<br>Array First is : "+skill[0]);
+                document.write("<br>Array Last is : "+skill[skill.length-1]);
+                skill.push(".net");
+                document.write("<br>Array element is : "+skill);
+                skill.pop();
+                document.write("<br>Array element is : "+skill);
+                document.write("<br>Array element are");
+                for(let i=0;i<skill.length;i++){
+                    document.write("<br> "+skill[i]);
+                }
+            }
+        </script>
+    </body>
+</html>
