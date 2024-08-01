@@ -1,0 +1,63 @@
+
+Name : R-Jeevanantham
+SQL
+DAY-2
+Trinning
+
+
+
+
+create table tbl_employee (eid number(5),ename varchar2(20),esalary number(5));
+
+insert into tbl_employee values(33,'Jeeva',2000);
+insert into tbl_employee values(34,'Nantham',200);
+insert into tbl_employee values(35,'Gopi',5600);
+insert into tbl_employee values(36,'Karthi',7800);
+insert into tbl_employee values(36,'Raja',2300);
+insert into tbl_employee values(37,'Mithun',50000);
+
+insert into tbl_employee (eid,esalary) values(38,3450);
+insert into tbl_employee  values(38,'',3450);
+
+select *from tbl_employee;
+desc tbl_employee;
+
+select *from tbl_employee where eid in(33,35,60);
+select *from tbl_employee where eid not in(33,35,60);
+
+select *from tbl_employee where esalary between 1000 and 10000;
+select *from tbl_employee where esalary not between 1000 and 10000;
+
+select *from tbl_employee where eid in(33,35,36) and esalary >1000;
+select *from tbl_employee where eid in(33,35,36) or esalary >1000;
+
+select *from tbl_employee where ename is null;
+select *from tbl_employee where ename is not null;
+
+select *from tbl_employee where ename like '%i';
+select *from tbl_employee where ename like '_a%';
+select *from tbl_employee where ename not like '%e%';
+select *from tbl_employee where ename like '%e%' ;
+
+select *from tbl_employee order by ename;
+select *from tbl_employee order by ename desc;
+select *from tbl_employee order by esalary;
+select *from tbl_employee order by esalary desc;
+
+alter table tbl_employee add doj date;
+update tbl_employee set doj=sysdate where eid=37;
+update tbl_employee set doj='08-02-2000' where eid in (36,38);
+
+alter table tbl_employee drop column doj;
+
+alter table tbl_employee modify esalary number(7);
+alter table tbl_employee modify esalary number(6);
+
+alter table tbl_employee rename column esalary to salary;
+
+alter table tbl_employee rename to table_employee;
+alter table table_employee rename to tbl_employee;
+
+
+
+
