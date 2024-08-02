@@ -1,0 +1,31 @@
+
+
+Name : R.jeevanantham
+Reg no:73152115033
+DAY : 3
+Topic :SQL
+
+
+create table department (dno number(5) primary key,dname varchar2(20));
+create table employee (eid number(5) primary key,ename varchar2(20),esalary number(5),dno number(5),foreign key (dno)references department(dno));
+
+insert into department values(10,'ECE');
+insert into department values(11,'CSE');
+insert into employee values(33,'Jeeva',2000,10);
+insert into employee values(34,'gopi',4000,11);
+
+
+select *from department;
+select *from employee;
+
+create view myview as select * from employee where dno=10;
+select *from myview;+
+update myview  set esalary=3000 where eid=33;
+delete from myview where eid =33;
+drop view myview;
+
+
+
+select eid,ename from employee;
+select eid as "Employee id",ename as "employee name" from employee;
+select dno, count(*) from employee group by dno;
